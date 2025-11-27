@@ -9,6 +9,7 @@ It consists of:
 6.Error messages are displayed for invalid inputs and duplicate accounts.
 ---------
 To import the User_authentication database:
+----
 1.Go to XAMPP , start Apache and MySql.
 2.Go to http://localhost/phpmyadmin
 3.Create a new databse by clicking new and name it user_authentication
@@ -19,16 +20,25 @@ To import the User_authentication database:
     password VARCHAR(255)
 5.Place the UserAuthentication folder in the htdocs of XAMPP
 6.Update the db_connect.php with the following :
+--
 <?php
+
 $servername="localhost";
+
 $username="root";
+
 $password="";
+
 $dbname="user_authentication";
+
 $conn=new mysqli($servername,$username,$password,$dbname);
+
 if ($conn-> connect_error){
     die("database connection failed: ".$conn->connect_error);
 }
+
 ?>
+
 7.Open your browser and go to :http://localhost/UserAuthentication/Registration.php
 ------
 After these steps you can register a new user through the Registration.php
