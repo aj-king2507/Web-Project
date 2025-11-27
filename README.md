@@ -66,7 +66,3 @@ http://localhost/UserAuthentication/Registration.php
 ---
 
 
----
-
-
-ing readme.md…]()
