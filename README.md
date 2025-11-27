@@ -1,6 +1,4 @@
 # Web-Project
-
-[readme.md](https://github.com/user-attachments/files/23798000/readme.md)
 The project involves all backend tasks related to the  User Authentication system
 It consists of:
 1.User registration with username , password and email.
@@ -9,7 +7,7 @@ It consists of:
 4.Login users are accessible to dashboard
 5.Login users are given the option to logout on the dashboard
 6.Error messages are displayed for invalid inputs and duplicate accounts.
-
+---------
 To import the User_authentication database:
 1.Go to XAMPP , start Apache and MySql.
 2.Go to http://localhost/phpmyadmin
@@ -32,5 +30,6 @@ if ($conn-> connect_error){
 }
 ?>
 7.Open your browser and go to :http://localhost/UserAuthentication/Registration.php
+------
 After these steps you can register a new user through the Registration.php
 you can login using the Login.php
