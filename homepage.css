@@ -1,0 +1,157 @@
+body {
+    margin: 0;
+    background: linear-gradient(to bottom, #fffafa, #d7bce8);
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px;
+    background-color: transparent;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-family: 'Courgette', cursive;
+    font-weight: lighter;
+    font-size: 15px;
+    letter-spacing: 0.90em;
+    color: #9b59b6;
+    margin-left: 35px;
+    padding: 0; 
+}
+
+nav {
+    background: transparent;
+    padding: 20px 60px;
+}
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+    justify-content: space-around;
+}
+
+nav a {
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.1;
+    color:black;
+    padding: 10px 10px;
+    display: block;
+}
+
+nav ul li a {
+    transition: all 0.5s ease;
+}
+
+
+nav ul li a:hover {
+    background-color: #9b59b6;
+    border-radius: 12px;
+    transform: scale(1.08);
+}
+
+.login-btn {
+    background: #9b59b6;
+    color: #ffffff;
+    padding: 15px 30px;
+    text-align: center;
+    width: 175px;
+    border: none;
+    border-radius: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.11;
+    cursor: pointer;
+    text-decoration: none;
+    margin-right: 30px;
+}
+
+
+main {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 25px 100px;  
+}
+
+.tagline {
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+    font-size: large;
+    text-transform: capitalize;
+    margin-left: 235px;
+    padding-top: 12%;
+    margin-bottom: -5px;   
+}
+
+
+.intro-h2 {
+    display: block;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 1.2;
+    white-space: pre-line;
+    margin-left: 150px;
+    margin-top: -60px;
+    margin-bottom: 10%;
+    padding-top: 10%;
+    padding-bottom: 5%;
+}
+
+.intro-h2 span {
+    color: #9b59b6;
+    font-family: 'Courgette', cursive;
+    font-weight: lighter;
+    font-size: 40px;
+}
+
+
+.booking-btn {
+    background: #9b59b6;
+    color: #ffffff;
+    padding: 15px 30px;
+    text-align: center;
+    width: 200px;
+    border: none;
+    border-radius: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.11;
+    cursor: pointer;
+    text-decoration: none;
+    margin-left: 240px;
+}
+
+
+.hero-image img {
+    width: 400px;
+    height: auto;
+    margin-left: 70px;
+    margin-right: 50px;
+    mix-blend-mode: multiply;  
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: transparent;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+}
