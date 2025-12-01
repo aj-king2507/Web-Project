@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Opal Glow Appointment Form</title>
+        <meta name="author" content="Heena"/>
+        <meta name="keywords" content="Opal Glow, Beauty Salon, Skin care, Hair spa, Body care, Mauritius, Glow treatment"/>
+        <meta name="description" content="Opal Glow beauty salon offers premium skin, hair and body care treatments to help you look and feel your glowing best."/>
+        <meta charset="utf-8"/>
+        <meta name="robots" content="index, follow, archive"/>
+        <link rel="stylesheet" href="booking.css">
+        <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    
+    <div class="background"></div>
+
+    <div class="form-container">
+        <div class="back-home">
+            <a href="homepage.html">&larr; Homepage</a>
+        </div>
+
+        <h1><span>Opal Glow</span> Appointment Form</h1>
+        <p class="subtitle">Please fill out the form below, it only takes 3 minutes.</p>
+
+        <form action="#" method="POST" class="appointment-form">
+
+            <div class="two-col">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+            
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+            </div>
+
+<div class="two-col">
+    <div class="form-group">
+    <label for="phone">Phone</label>
+    <input type="tel" id="phone" name="phone" pattern="^\+230[0-9]{8}$" title="Enter your phone number starting with +230 followed by 8 digits." required>
+</div>
+
+<div class="form-group">
+    <label for="service-type">Select Your Service Type</label>
+    <select id="service-type" name="service-type" required>
+        <option value=" " disabled selected></option>
+        <option value="Japanese Head Spa">Japanese Head Spa</option>
+        <option value="Keratin Hair Treatment">Keratin Hair Treatment</option>
+        <option value="Glow Revival Facial">Glow Revival Facial</option>
+        <option value="Microdermabrasion">Microdermabrasion</option>
+        <option value="Serenity Massage">Serenity Massage</option>
+        <option value="Body Scrub & Wrap">Body Scrub & Wrap</option>
+    </select>
+</div>
+</div>
+
+<div class="two-col">
+    <div class="form-group">
+    <label for="date">Choose Your Date</label>
+    <input type="date" id="date" name="date" required>
+</div>
+
+<div class="form-group">
+    <label for="time">Choose Your Time</label>
+    <select id="time" name="time" required>
+        <option value=" " disabled selected></option>
+        <option value="09:00">09:00</option>
+        <option value="10:00">10:00</option>
+        <option value="11:00">11:00</option>
+        <option value="13:00">13:00</option>
+        <option value="14:00">14:00</option>
+        <option value="15:00">15:00</option>
+    </select>
+</div>
+</div>
+
+<div class="closing-info">
+    <p>Note: Saturday closing time: 12:30.
+        Closed on Sundays and public holidays.</p>
+
+    <button type="submit" class="booking-btn">Book Your Glow Now</button>
+</div>
+
+</form>
+</div>
+
+</body>
+</html>
