@@ -12,3 +12,97 @@ body {
     margin-top: 50px;
 }
 
+/* LEFT SIDE — BUSINESS INFO */
+.business-info {
+    width: 40%;
+    background: rgba(255, 255, 255, 0.65);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.10);
+}
+
+.business-info h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: #9b59b6;
+    margin-bottom: 15px;
+    font-size: 28px;
+}
+
+.business-info p {
+    font-size: 16px;
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+.map-box {
+    margin-top: 20px;
+}
+
+/* RIGHT SIDE — CONTACT FORM */
+.form-section {
+    width: 55%;
+    background: rgba(255, 255, 255, 0.65);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.10);
+}
+
+.form-section h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: #9b59b6;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.contact-form label {
+    font-weight: 600;
+    margin-top: 15px;
+    display: block;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border: 2px solid #9b59b6;
+    border-radius: 10px;
+    background: #fff;
+    font-size: 15px;
+}
+
+.contact-form textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+/* BUTTON STYLE — matches your booking/login buttons */
+.send-btn {
+    background: #9b59b6;
+    color: #ffffff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 200px;
+    transition: 0.3s ease;
+}
+
+.send-btn:hover {
+    transform: scale(1.05);
+    background: #8e44ad;
+}
+
+/* Responsive */
+@media(max-width: 900px) {
+    .contact-container {
+        flex-direction: column;
+        padding: 40px 30px;
+    }
+    .business-info, .form-section {
+        width: 100%;
+    }
+}
