@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+  background: linear-gradient(to bottom, #fffafa, #d7bce8);
+  font-family: 'Montserrat' , sans-serif;
+}
+
+.contact-contaner {
+  display: flex;
+    justify-content: space-between;
+    padding: 60px 100px;
+    gap: 50px;
+    margin-top: 50px;
+}
+
