@@ -125,6 +125,21 @@ INSERT INTO `payment` (`payment_id`, `appointment_id`, `amount`, `method`, `stat
 (2, 2, 600.00, 'online', 'Pending', '2025-11-01 12:00:00', 'DEP#L456');
 
 -- --------------------------------------------------------
+--
+-- Table structure for table `contact_messages`
+--
+
+CREATE TABLE `contact_messages` (
+    client_id INT AUTO_INCREMENT PRIMARY KEY,
+    client_name VARCHAR(150) NOT NULL,
+    client_email VARCHAR(150) NOT NULL,
+    client_phone VARCHAR(50) NOT NULL,
+    service VARCHAR(150) NOT NULL,
+    message TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- --------------------------------------------------------
 
 --
 -- Table structure for table `service`
