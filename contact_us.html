@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Opal Glow – Contact Us</title>
+    <meta charset="utf-8"/>
+    <meta name="author" content="Gregory">
+    <meta name="keywords" content="Opal Glow, contact, beauty salon, Mauritius">
+    <meta name="description" content="Contact Opal Glow Beauty Salon for appointments, inquiries or support.">
+    <meta name="robots" content="index, follow, archive"/>
+
+    <!-- Existing main styling -->
+    <link rel="stylesheet" href="homepage.css">
+
+    <!-- Contact page styling -->
+    <link rel="stylesheet" href="contact_us.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- HEADER (same as your HTML) -->
+    <header>
+        <div class="logo">
+            <h1>Opal Glow</h1>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="about_us.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact_us.php" style="color:#9b59b6; font-weight:bold;">Contact Us</a></li>
+            </ul>
+        </nav>
+
+        <a href="login.html" class="login-btn">Login</a>
+    </header>
+
+    <!-- MAIN CONTACT SECTION -->
+    <main class="contact-container">
+
+        <!-- LEFT: BUSINESS DETAILS -->
+        <section class="contact-info">
+            <h2>Get In Touch</h2>
+
+            <p><strong>Business Name:</strong><br>Opal Glow Beauty Salon</p>
+            <p><strong>Email:</strong><br> contact@opalglo.mu</p>
+            <p><strong>Phone:</strong><br> +230 5467 2214</p>
+            <p><strong>Address:</strong><br> 3rd Floor, Saphire Tower Cybercity, Ebene Mauritius</p>
+            <p><strong>Opening Hours:</strong><br> Mon–Sat: 9AM – 5PM Sat:9AM - 12:30PM</p>
+        </section>
+
+        <!-- RIGHT: CONTACT FORM -->
+        <section class="contact-form-section">
+            <h2>Send Us a Message</h2>
+
+            <!-- Form now posts to process PHP -->
+            <form action="contact_process.php" method="POST" class="contact-form">
+
+                <label>Your Name</label>
+                <input type="text" name="name" required>
+
+                <label>Your Phone Number</label>
+                <input type="text" name="phone" required>
+
+                <label>What Service Would You Like?</label>
+                <select name="service" required>
+                  <option value="">-- Select a Service --</option>
+                  <option>Skin Care Treatment</option>
+                  <option>Hair Spa</option>
+                  <option>Body Glow Treatment</option>
+                  <option>Full Makeover Package</option>
+                  <option>Bridal Glow Package</option>
+                  <option>Massage Therapy</option>
+                </select>
+
+                <label>Your Email</label>
+                <input type="email" name="email" required>
+
+                <label>Your Message</label>
+                <textarea name="message" required></textarea>
+
+                <button type="submit" class="send-btn">Send Message</button>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        &copy; 2025 Opal Glow. All Rights Reserved.
+    </footer>
+
+</body>
+</html>
+
