@@ -1,0 +1,183 @@
+/* General Body and Layout Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styles - Matching View User Page */
+/* Header Styles */
+.admin-header {
+    background-color: #6a1b9a; /* Purple */
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dashboard-logo {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.admin-badge {
+    background-color: #ffab00;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin-right: 20px;
+}
+
+.back-btn, .logout-btn {
+    padding: 8px 16px;
+    margin-left: 10px;
+    color: white;
+    background-color: #8e24aa; /* Dark purple for buttons */
+    border-radius: 5px;
+}
+
+.back-btn:hover, .logout-btn:hover {
+    background-color: #7b1fa2; /* Darker purple on hover */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #6a0dad;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Dashboard Section */
+.dashboard {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.dashboard h2 {
+    color: #6a0dad;
+    margin-bottom: 20px;
+}
+
+/* Card Style for Statistics */
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1;
+}
+
+.card h3 {
+    margin: 10px 0;
+    color: #6a0dad;
+}
+
+.card p {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Flexbox Layout for Dashboard */
+.dashboard-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Chart Styles */
+.chart-container {
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chart-container canvas {
+    width: 100%;
+    height: auto;
+}
+
+/* Table Styles */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.table th, .table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.table th {
+    background-color: #6a0dad;
+    color: #fff;
+}
+
+.table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Button Styles */
+button {
+    background-color: #6a0dad;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #550a93;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .dashboard-content {
+        flex-direction: column;
+    }
+
+    .card {
+        margin-bottom: 15px;
+    }
+}

@@ -1,0 +1,131 @@
+body { font-family:'Montserrat', sans-serif; background:#0d0d0d; color:#fff; margin:0; }
+/* Header */
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #1a1a1a;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header .logo h1 {
+    color: #d8b3ff;
+    font-family: 'Courgette', cursive;
+    font-size: 28px;
+    margin: 0;
+}
+
+/* Navigation styling */
+header nav {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* Space between nav links and user actions */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #e6e6fa;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #d8b3ff;
+}
+
+/* User actions (username + logout) */
+header .user-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+header .person-emoji {
+    font-size: 1.2rem;
+    color: #d8b3ff;
+}
+
+header .logout-btn {
+    background-color: #d8b3ff;
+    color: #1a1a1a;
+    padding: 6px 14px;
+    border-radius: 12px;
+    font-weight: 500;
+    transition: background 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+}
+
+header .logout-btn:hover {
+    background-color: #b07fff;
+    transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px 30px;
+    }
+
+    header nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+
+    header .user-actions {
+        justify-content: center;
+    }
+}
+
+.services-section { padding:4rem 6rem; text-align:center; }
+.services-section .section-title { font-size:2.5rem; color:#cfa6ff; margin-bottom:2rem; }
+.services-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:2rem; }
+
+.service-card { background:#1a1a1a; border-radius:15px; overflow:hidden; transition: transform 0.4s ease, box-shadow 0.4s ease; }
+.service-card:hover { transform:translateY(-8px); box-shadow:0 10px 30px rgba(207,166,255,0.5); }
+
+.service-image img { width:100%; height:200px; object-fit:cover; transition:transform 0.5s ease, filter 0.5s ease; cursor:pointer; }
+.service-card:hover .service-image img { transform:scale(1.1); filter:brightness(0.85); }
+
+.service-info { padding:1rem; }
+.service-info h3 { color:#cfa6ff; margin-bottom:0.3rem; }
+.service-info p { color:#ccc; font-size:0.9rem; }
+
+/* Modal */
+.modal-overlay { position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.85); display:flex; align-items:center; justify-content:center; opacity:0; pointer-events:none; transition:0.4s ease; }
+.modal-overlay.active { opacity:1; pointer-events:auto; }
+.modal-content { background:#1a1a1a; padding:2rem; border-radius:15px; max-width:500px; width:90%; text-align:left; position:relative; animation:fadeIn 0.4s ease; }
+.modal-close { position:absolute; top:1rem; right:1rem; font-size:1.5rem; cursor:pointer; color:#cfa6ff; }
+.modal-content h3 { color:#cfa6ff; margin-bottom:1rem; }
+.modal-content p { margin-bottom:0.7rem; color:#ccc; }
+
+@keyframes fadeIn { from { transform:scale(0.8); opacity:0; } to { transform:scale(1); opacity:1; } }
+
+/* Footer */
+footer {
+    padding: 30px;
+    text-align: center;
+    background-color: #1a1a1a;
+    margin-top: 50px;
+}

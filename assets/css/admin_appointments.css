@@ -1,0 +1,167 @@
+/* General Styles for Admin Panel */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin-top: 30px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Header Styles */
+.admin-header {
+    background-color: #6a1b9a;
+    color: white;
+    padding: 10px 0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.navbar {
+    display: flex;
+    gap: 15px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #f1c40f;
+}
+
+/* Page Title */
+.page-title {
+    font-size: 26px;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Table Styles */
+.appointments-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+.appointments-table th, .appointments-table td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.appointments-table th {
+    background-color: #6a1b9a;
+    color: white;
+    font-size: 16px;
+}
+
+.appointments-table td {
+    background-color: #fff;
+    font-size: 14px;
+}
+
+/* Appointment Status Styling */
+.status {
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.status.Booked {
+    background-color: #f4f4f9;
+    color: #27ae60; /* Green */
+}
+
+.status.Cancelled {
+    background-color: #f4f4f9;
+    color: #f44336; /* Red */
+}
+
+.status.Completed {
+    background-color: #f4f4f9;
+    color: #3498db; /* Blue */
+}
+
+.status.NoShow {
+    background-color: #f4f4f9;
+    color: #e67e22; /* Orange */
+}
+
+.status.Rescheduled {
+    background-color: #f4f4f9;
+    color: #9b59b6; /* Purple */
+}
+
+/* Button Styling */
+.appointments-table td a.btn-cancel {
+    background-color: #f44336;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.appointments-table td a.btn-cancel:hover {
+    background-color: #d32f2f;
+}
+
+/* Success/Error Alert Boxes */
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+    margin: 10px auto;
+}
+
+.alert.success {
+    background-color: #4caf50;
+    color: white;
+}
+
+.alert.error {
+    background-color: #f44336;
+    color: white;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #6a1b9a;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
