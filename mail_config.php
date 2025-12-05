@@ -5,7 +5,7 @@ return [
     'smtp_host' => 'smtp.gmail.com',
     'smtp_port' => 587,                // or 465 for SSL
     'smtp_user' => 'opalglowspa.beauty@gmail.com',
-    'smtp_pass' => 'shpexfxjgtwvgsah', // Gmail App Password (16 chars)
+    'smtp_pass' => 'xxxxxxxxxxxxxxxx', // Gmail App Password (16 chars)
     'smtp_secure' => 'tls',            // 'tls' for 587 or 'ssl' for 465
     'from_email' => 'no-reply@opalglow.com',
     'from_name'  => 'Opal Glow',
