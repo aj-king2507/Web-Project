@@ -1,55 +1,36 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "Appointments Schema",
   "type": "array",
   "items": {
     "type": "object",
     "properties": {
-      "id": {
-        "type": "string",
-        "pattern": "^[0-9]+$",
-        "description": "Unique appointment ID"
-      },
-      "customer_name": {
-        "type": "string",
-        "minLength": 1,
-        "description": "Customer full name"
-      },
-      "phone": {
-        "type": "string",
-        "pattern": "^\\+?[0-9]{7,15}$",
-        "description": "Phone number (7–15 digits, optional +)"
-      },
-      "email": {
-        "type": "string",
-        "format": "email",
-        "description": "Valid email address"
-      },
-      "service": {
-        "type": "string",
-        "minLength": 1,
-        "description": "Selected service name"
-      },
-      "time_slot": {
-        "type": "string",
-        "pattern": "^([01]\\d|2[0-3]):([0-5]\\d)$",
-        "description": "Time in HH:MM format (24-hour)"
-      },
-      "appointment_date": {
-        "type": "string",
-        "format": "date",
-        "description": "Date in YYYY-MM-DD format"
-      }
+      "appointment_id": { "type": "integer" },
+
+      "start_datetime": { "type": "string" },
+      "end_datetime": { "type": "string" },
+      "status": { "type": "string" },
+      "notes": { "type": ["string", "null"] },
+
+      "customer_first": { "type": "string" },
+      "customer_last": { "type": "string" },
+
+      "therapist_first": { "type": "string" },
+      "therapist_last": { "type": "string" },
+
+      "service_name": { "type": "string" },
+      "price": { "type": "number" }
     },
     "required": [
-      "id",
-      "customer_name",
-      "phone",
-      "email",
-      "service",
-      "time_slot",
-      "appointment_date"
-    ],
-    "additionalProperties": false
+      "appointment_id",
+      "start_datetime",
+      "end_datetime",
+      "status",
+      "customer_first",
+      "customer_last",
+      "therapist_first",
+      "therapist_last",
+      "service_name",
+      "price"
+    ]
   }
 }
