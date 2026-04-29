@@ -1,64 +1,35 @@
 <?php
+require 'db.php';
 
-require 'vendor/autoload.php';
-use JsonSchema\Validator;
+header("Content-Type: application/json");
+header('Content-Disposition: attachment; filename="appointments.json"');
 
-// Example: Replace with DB fetch if needed
-$appointments = [
-    [
-        "id" => "1",
-        "customer_name" => "Sara",
-        "phone" => "+23057356712",
-        "email" => "Sara.123@gmail.com",
-        "service" => "Japanese Head Spa",
-        "time_slot" => "11:00",
-        "appointment_date" => "2026-04-24"
-    ],
-    [
-        "id" => "2",
-        "customer_name" => "Gaby",
-        "phone" => "+23053457128",
-        "email" => "GabyS@gmail.com",
-        "service" => "Keratin Hair Treatment",
-        "time_slot" => "09:00",
-        "appointment_date" => "2026-04-25"
-    ],
-    [
-        "id" => "3",
-        "customer_name" => "Gaby",
-        "phone" => "+23057456578",
-        "email" => "GabyS@gmail.123", // INVALID
-        "service" => "Keratin Hair Treatment",
-        "time_slot" => "11:00",
-        "appointment_date" => "2026-04-25"
-    ]
-];
+$stmt = $pdo->prepare("
+    SELECT 
+        a.appointment_id,
+        a.start_datetime,
+        a.end_datetime,
+        a.status,
+        a.notes,
 
-// Convert to JSON object
-$data = json_decode(json_encode($appointments));
+        c.first_name AS customer_first,
+        c.last_name AS customer_last,
 
-// Load schema
-$schema = json_decode(file_get_contents('appointments-schema.json'));
+        t.first_name AS therapist_first,
+        t.last_name AS therapist_last,
 
-// Validate
-$validator = new Validator();
-$validator->validate($data, $schema);
+        s.name AS service_name,
+        s.price
 
-if ($validator->isValid()) {
+    FROM appointment a
+    JOIN customer c ON a.customer_id = c.customer_id
+    JOIN therapist t ON a.therapist_id = t.therapist_id
+    JOIN service s ON a.service_id = s.service_id
+");
 
-    file_put_contents(
-        'appointments.json',
-        json_encode($appointments, JSON_PRETTY_PRINT)
-    );
+$stmt->execute();
+$data = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-    echo "JSON file created successfully";
-
-} else {
-
-    echo "JSON validation failed:<br>";
-
-    foreach ($validator->getErrors() as $error) {
-        echo "[{$error['property']}] {$error['message']}<br>";
-    }
-
-}
+echo json_encode($data, JSON_PRETTY_PRINT);
+exit;
+?>
