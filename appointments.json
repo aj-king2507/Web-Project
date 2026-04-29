@@ -1,0 +1,50 @@
+[
+  {
+    "appointment_id": 1,
+    "start_datetime": "2025-11-03 10:00:00",
+    "end_datetime": "2025-11-03 11:00:00",
+    "status": "Booked",
+    "notes": "First-time client",
+
+    "customer_first": "Maya",
+    "customer_last": "Singh",
+
+    "therapist_first": "Nadia",
+    "therapist_last": "Patel",
+
+    "service_name": "Swedish Massage",
+    "price": 1800.00
+  },
+  {
+    "appointment_id": 2,
+    "start_datetime": "2025-11-03 15:30:00",
+    "end_datetime": "2025-11-03 16:20:00",
+    "status": "Booked",
+    "notes": null,
+
+    "customer_first": "Leo",
+    "customer_last": "Ferreira",
+
+    "therapist_first": "Iris",
+    "therapist_last": "Costa",
+
+    "service_name": "Classic Facial",
+    "price": 1200.00
+  },
+  {
+    "appointment_id": 3,
+    "start_datetime": "2025-11-05 09:30:00",
+    "end_datetime": "2025-11-05 10:00:00",
+    "status": "Booked",
+    "notes": "",
+
+    "customer_first": "Ava",
+    "customer_last": "Morel",
+
+    "therapist_first": "Nadia",
+    "therapist_last": "Patel",
+
+    "service_name": "Manicure",
+    "price": 700.00
+  }
+]
