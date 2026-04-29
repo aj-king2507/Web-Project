@@ -1,151 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Appointments (AJAX View)</title>
-
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>OpalGlow Appointments</title>
 
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: Arial;
+            background: #f4f6f8;
             padding: 20px;
         }
 
-        h2 {
-            margin-bottom: 20px;
-        }
-
         table {
-            border-collapse: collapse;
             width: 100%;
-        }
-
-        table, th, td {
-            border: 1px solid #ccc;
+            border-collapse: collapse;
+            background: white;
         }
 
         th, td {
+            border: 1px solid #ddd;
             padding: 10px;
-            text-align: left;
         }
 
         th {
-            background-color: #f4f4f4;
+            background: #007BFF;
+            color: white;
         }
 
-        #spinner {
-            display: none;
-            margin: 10px 0;
-        }
-
-        #message {
-            margin: 10px 0;
-            font-weight: bold;
-        }
-
-        .error {
-            color: red;
-        }
-
-        .success {
-            color: green;
+        h2 {
+            text-align: center;
         }
     </style>
 </head>
 
 <body>
 
-<h2>Appointments List (Loaded with AJAX)</h2>
+<h2>Appointments Dashboard</h2>
 
-<!-- Loading Spinner -->
-<div id="spinner">⏳ Loading appointments...</div>
-
-<!-- Message -->
-<div id="message"></div>
-
-<!-- Table -->
 <table id="appointmentsTable">
     <thead>
         <tr>
             <th>ID</th>
-            <th>Name</th>
-            <th>Phone</th>
-            <th>Email</th>
+            <th>Customer</th>
+            <th>Therapist</th>
             <th>Service</th>
-            <th>Time</th>
-            <th>Date</th>
+            <th>Start</th>
+            <th>End</th>
+            <th>Status</th>
+            <th>Price</th>
         </tr>
     </thead>
-    <tbody>
-        <!-- Data will be inserted here -->
-    </tbody>
+
+    <tbody></tbody>
 </table>
 
-<script>
-function loadAppointments() {
-
-    $("#spinner").show();
-    $("#message").html("");
-
-    $.ajax({
-        url: "../backend/data/appointments.json", // IMPORTANT PATH
-        method: "GET",
-        dataType: "json",
-
-        success: function(data) {
-
-            $("#spinner").hide();
-            $("#appointmentsTable tbody").html("");
-
-            if (data.length === 0) {
-                $("#message").html("No appointments found").addClass("error");
-                return;
-            }
-
-            data.forEach(function(app) {
-
-                // Highlight invalid email
-                let emailClass = app.email.includes("@") && app.email.includes(".")
-                    ? ""
-                    : "style='color:red;'";
-
-                $("#appointmentsTable tbody").append(`
-                    <tr>
-                        <td>${app.id}</td>
-                        <td>${app.customer_name}</td>
-                        <td>${app.phone}</td>
-                        <td ${emailClass}>${app.email}</td>
-                        <td>${app.service}</td>
-                        <td>${app.time_slot}</td>
-                        <td>${app.appointment_date}</td>
-                    </tr>
-                `);
-            });
-
-            $("#message")
-                .html("Appointments loaded successfully")
-                .removeClass("error")
-                .addClass("success");
-        },
-
-        error: function() {
-            $("#spinner").hide();
-            $("#message")
-                .html("Failed to load JSON data")
-                .removeClass("success")
-                .addClass("error");
-        }
-    });
-}
-
-// Load on page start
-loadAppointments();
-
-// Auto-refresh every 5 seconds (great for demo)
-setInterval(loadAppointments, 5000);
-</script>
+<script src="booking.js"></script>
 
 </body>
 </html>
