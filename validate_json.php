@@ -41,9 +41,9 @@ try {
     $validator->validate($data, $schema);
 
     if ($validator->isValid()) {
-        echo "JSON is valid ✅";
+        echo "JSON is valid";
     } else {
-        echo "JSON is invalid ❌<br><br>";
+        echo "JSON is invalid <br><br>";
         foreach ($validator->getErrors() as $error) {
             echo "[{$error['property']}] {$error['message']}<br>";
         }
