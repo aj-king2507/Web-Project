@@ -10,9 +10,9 @@ if ($conn->connect_error) {
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     // SECURITY: prevent XSS
-    $name    = htmlspecialchars(trim($_POST['client_name']));
-    $email   = htmlspecialchars(trim($_POST['client_email']));
-    $phone   = htmlspecialchars(trim($_POST['client_phone']));
+    $client_name = htmlspecialchars(trim($_POST['client_name']));
+    $client_email = htmlspecialchars(trim($_POST['client_email']));
+    $client_phone = htmlspecialchars(trim($_POST['client_phone']));
     $service = htmlspecialchars(trim($_POST['service']));
     $message = htmlspecialchars(trim($_POST['message']));
 
